@@ -1,0 +1,129 @@
+2020-09-14 16:16:54,017 ERROR: Exception on /index [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/scotthalasy/microblog/app/routes.py", line 88, in index
+    posts = current_user.followed_posts().all()
+  File "/Users/scotthalasy/microblog/app/models.py", line 61, in followed_posts
+    own = Post.query.filter(user_id == self.id)
+NameError: name 'user_id' is not defined
+2020-09-14 18:45:13,157 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:41]
+2020-09-14 18:45:14,551 ERROR: Exception on /index [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/scotthalasy/microblog/app/routes.py", line 88, in index
+    posts = current_user.followed_posts().all()
+  File "/Users/scotthalasy/microblog/app/models.py", line 61, in followed_posts
+    own = Post.query.filter(user_id == self.id)
+NameError: name 'user_id' is not defined
+2020-09-14 18:45:16,579 ERROR: Exception on / [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/scotthalasy/microblog/app/routes.py", line 88, in index
+    posts = current_user.followed_posts().all()
+  File "/Users/scotthalasy/microblog/app/models.py", line 61, in followed_posts
+    own = Post.query.filter(user_id == self.id)
+NameError: name 'user_id' is not defined
+2020-09-14 18:45:30,889 ERROR: Exception on /index [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/scotthalasy/microblog/app/routes.py", line 88, in index
+    posts = current_user.followed_posts().all()
+  File "/Users/scotthalasy/microblog/app/models.py", line 61, in followed_posts
+    own = Post.query.filter(user_id == self.id)
+NameError: name 'user_id' is not defined
+2020-09-14 18:52:03,753 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:41]
+2020-09-14 18:52:05,127 ERROR: Exception on / [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/scotthalasy/microblog/app/routes.py", line 88, in index
+    posts = current_user.followed_posts().all()
+  File "/Users/scotthalasy/microblog/app/models.py", line 61, in followed_posts
+    own = Post.query.filter(user_id == self.id)
+NameError: name 'user_id' is not defined
+2020-09-14 18:52:12,124 ERROR: Exception on /index [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/scotthalasy/microblog/app/routes.py", line 88, in index
+    posts = current_user.followed_posts().all()
+  File "/Users/scotthalasy/microblog/app/models.py", line 61, in followed_posts
+    own = Post.query.filter(user_id == self.id)
+NameError: name 'user_id' is not defined
+2020-09-14 19:01:53,357 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:41]
