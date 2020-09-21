@@ -77,3 +77,4 @@ jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', 
 2020-09-17 16:31:50,964 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:48]
 2020-09-18 09:26:05,555 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:48]
 2020-09-18 11:27:44,946 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:53]
+2020-09-21 11:21:07,050 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:53]
