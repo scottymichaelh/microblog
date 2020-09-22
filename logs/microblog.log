@@ -99,3 +99,6 @@ Traceback (most recent call last):
     raise BuildError(endpoint, values, method, self)
 werkzeug.routing.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth.login' instead?
 2020-09-22 12:07:06,554 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:62]
+2020-09-22 12:31:53,859 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:71]
+2020-09-22 12:33:42,201 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:71]
+2020-09-22 12:34:32,262 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:71]
