@@ -1,4 +1,4 @@
-2020-09-14 16:16:54,017 ERROR: Exception on /index [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
+2020-09-14 19:01:55,315 ERROR: Exception on / [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
 Traceback (most recent call last):
   File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -17,10 +17,9 @@ Traceback (most recent call last):
   File "/Users/scotthalasy/microblog/app/routes.py", line 88, in index
     posts = current_user.followed_posts().all()
   File "/Users/scotthalasy/microblog/app/models.py", line 61, in followed_posts
-    own = Post.query.filter(user_id == self.id)
-NameError: name 'user_id' is not defined
-2020-09-14 18:45:13,157 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:41]
-2020-09-14 18:45:14,551 ERROR: Exception on /index [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
+    own = Post.query.filter(user_id = self.id)
+TypeError: filter() got an unexpected keyword argument 'user_id'
+2020-09-14 19:02:03,235 ERROR: Exception on /index [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
 Traceback (most recent call last):
   File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -39,9 +38,10 @@ Traceback (most recent call last):
   File "/Users/scotthalasy/microblog/app/routes.py", line 88, in index
     posts = current_user.followed_posts().all()
   File "/Users/scotthalasy/microblog/app/models.py", line 61, in followed_posts
-    own = Post.query.filter(user_id == self.id)
-NameError: name 'user_id' is not defined
-2020-09-14 18:45:16,579 ERROR: Exception on / [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
+    own = Post.query.filter(user_id = self.id)
+TypeError: filter() got an unexpected keyword argument 'user_id'
+2020-09-14 19:02:59,627 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:41]
+2020-09-14 19:03:01,684 ERROR: Exception on /index [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
 Traceback (most recent call last):
   File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -60,9 +60,9 @@ Traceback (most recent call last):
   File "/Users/scotthalasy/microblog/app/routes.py", line 88, in index
     posts = current_user.followed_posts().all()
   File "/Users/scotthalasy/microblog/app/models.py", line 61, in followed_posts
-    own = Post.query.filter(user_id == self.id)
-NameError: name 'user_id' is not defined
-2020-09-14 18:45:30,889 ERROR: Exception on /index [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
+    own = Post.query.filter(user_id=self.id)
+TypeError: filter() got an unexpected keyword argument 'user_id'
+2020-09-14 19:03:08,684 ERROR: Exception on /index [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
 Traceback (most recent call last):
   File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -81,10 +81,10 @@ Traceback (most recent call last):
   File "/Users/scotthalasy/microblog/app/routes.py", line 88, in index
     posts = current_user.followed_posts().all()
   File "/Users/scotthalasy/microblog/app/models.py", line 61, in followed_posts
-    own = Post.query.filter(user_id == self.id)
-NameError: name 'user_id' is not defined
-2020-09-14 18:52:03,753 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:41]
-2020-09-14 18:52:05,127 ERROR: Exception on / [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
+    own = Post.query.filter(user_id=self.id)
+TypeError: filter() got an unexpected keyword argument 'user_id'
+2020-09-14 19:03:33,301 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:41]
+2020-09-14 19:03:37,071 ERROR: Exception on /index [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
 Traceback (most recent call last):
   File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -103,9 +103,11 @@ Traceback (most recent call last):
   File "/Users/scotthalasy/microblog/app/routes.py", line 88, in index
     posts = current_user.followed_posts().all()
   File "/Users/scotthalasy/microblog/app/models.py", line 61, in followed_posts
-    own = Post.query.filter(user_id == self.id)
+    own = Post.query.filter(user_id==self.id)
 NameError: name 'user_id' is not defined
-2020-09-14 18:52:12,124 ERROR: Exception on /index [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
+2020-09-14 19:04:56,990 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:41]
+2020-09-15 11:07:21,818 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:41]
+2020-09-15 11:07:45,497 ERROR: Exception on /explore [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
 Traceback (most recent call last):
   File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -121,9 +123,11 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/Users/scotthalasy/microblog/app/routes.py", line 88, in index
-    posts = current_user.followed_posts().all()
-  File "/Users/scotthalasy/microblog/app/models.py", line 61, in followed_posts
-    own = Post.query.filter(user_id == self.id)
-NameError: name 'user_id' is not defined
-2020-09-14 19:01:53,357 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:41]
+  File "/Users/scotthalasy/microblog/app/routes.py", line 134, in explore
+    posts = Post.query.order_by(Post.timestamp.desc()).paginate(page, app.Config['POSTS_PER_PAGE'],False)
+AttributeError: 'Flask' object has no attribute 'Config'
+2020-09-15 11:08:45,429 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:41]
+2020-09-15 11:11:44,139 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:41]
+2020-09-15 11:27:00,000 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:41]
+2020-09-15 11:52:20,898 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:41]
+2020-09-15 11:53:31,668 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:41]
