@@ -1,86 +1,4 @@
-2020-09-17 11:39:29,825 ERROR: Exception on /user/RealTest [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
-Traceback (most recent call last):
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/scotthalasy/microblog/app/routes.py", line 56, in user
-    return render_template('user.html', user=user, posts=posts.items, next_url=next_url, prev_url=prev_url, form=form)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/templating.py", line 138, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 883, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 857, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/loaders.py", line 127, in load
-    code = environment.compile(source, name, filename)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 638, in compile
-    self.handle_exception(source=source_hint)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "/Users/scotthalasy/microblog/app/templates/user.html", line 26, in template
-    {{ form.submit(value='Unfollow'), class='btn btn-default') }}
-jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got '='
-2020-09-17 11:39:37,191 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:45]
-2020-09-17 11:39:46,372 ERROR: Exception on /user/RealTest [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
-Traceback (most recent call last):
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/scotthalasy/microblog/app/routes.py", line 56, in user
-    return render_template('user.html', user=user, posts=posts.items, next_url=next_url, prev_url=prev_url, form=form)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/templating.py", line 138, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 883, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 857, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/loaders.py", line 127, in load
-    code = environment.compile(source, name, filename)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 638, in compile
-    self.handle_exception(source=source_hint)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "/Users/scotthalasy/microblog/app/templates/user.html", line 26, in template
-    {{ form.submit(value='Unfollow'), class='btn btn-default') }}
-jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got '='
-2020-09-17 11:40:30,885 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:45]
-2020-09-17 16:31:50,964 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:48]
-2020-09-18 09:26:05,555 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:48]
-2020-09-18 11:27:44,946 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:53]
-2020-09-21 11:21:07,050 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:53]
-2020-09-22 11:21:44,649 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:62]
-2020-09-22 11:23:04,671 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:62]
-2020-09-22 11:23:10,443 ERROR: Exception on /index [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
+2020-09-22 11:33:50,651 ERROR: Exception on /index [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
 Traceback (most recent call last):
   File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -113,4 +31,70 @@ Traceback (most recent call last):
   File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/werkzeug/routing.py", line 2179, in build
     raise BuildError(endpoint, values, method, self)
 werkzeug.routing.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth.login' instead?
-2020-09-22 11:26:09,882 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:62]
+2020-09-22 11:40:12,404 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:62]
+2020-09-22 11:40:14,781 ERROR: Exception on /index [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 271, in decorated_view
+    return current_app.login_manager.unauthorized()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/login_manager.py", line 174, in unauthorized
+    redirect_url = make_login_url(login_view, next_url=request.url)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 120, in login_url
+    base = expand_login_view(login_view)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 97, in expand_login_view
+    return url_for(login_view)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/werkzeug/routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth.login' instead?
+2020-09-22 11:40:16,024 ERROR: Exception on /index [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 271, in decorated_view
+    return current_app.login_manager.unauthorized()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/login_manager.py", line 174, in unauthorized
+    redirect_url = make_login_url(login_view, next_url=request.url)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 120, in login_url
+    base = expand_login_view(login_view)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 97, in expand_login_view
+    return url_for(login_view)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/werkzeug/routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth.login' instead?
