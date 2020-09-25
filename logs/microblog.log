@@ -23,3 +23,7 @@ TypeError: cannot unpack non-iterable NoneType object
 2020-09-25 13:36:43,599 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:73]
 2020-09-25 13:42:19,492 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:73]
 2020-09-25 13:44:24,138 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:73]
+2020-09-25 17:10:51,232 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:73]
+2020-09-25 17:12:20,050 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:73]
+2020-09-25 17:15:02,060 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:73]
+2020-09-25 17:15:55,153 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:73]
