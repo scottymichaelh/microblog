@@ -37,3 +37,6 @@ Traceback (most recent call last):
 jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got 'followers'
 2020-09-28 11:30:20,848 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:77]
 2020-09-28 11:46:46,077 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:77]
+2020-09-28 13:10:08,096 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:77]
+2020-09-28 13:13:51,522 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:77]
+2020-09-28 13:25:42,727 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:77]
