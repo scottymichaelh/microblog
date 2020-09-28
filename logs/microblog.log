@@ -1,4 +1,4 @@
-2020-09-25 13:30:36,900 ERROR: Exception on /search [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
+2020-09-28 11:29:08,112 ERROR: Exception on /user/scottymichaelh/popup [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
 Traceback (most recent call last):
   File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -14,17 +14,26 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/Users/scotthalasy/microblog/app/main/routes.py", line 112, in search
-    posts, total = Post.search(g.search_form.q.data, page, current_app.config['POSTS_PER_PAGE'])
-  File "/Users/scotthalasy/microblog/app/models.py", line 14, in search
-    ids, total = query_index(cls.__tablename__, expression, page, per_page)
-TypeError: cannot unpack non-iterable NoneType object
-2020-09-25 13:30:47,084 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:73]
-2020-09-25 13:36:43,599 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:73]
-2020-09-25 13:42:19,492 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:73]
-2020-09-25 13:44:24,138 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:73]
-2020-09-25 17:10:51,232 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:73]
-2020-09-25 17:12:20,050 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:73]
-2020-09-25 17:15:02,060 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:73]
-2020-09-25 17:15:55,153 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:73]
-2020-09-27 11:00:52,578 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:73]
+  File "/Users/scotthalasy/microblog/app/main/routes.py", line 122, in user_popup
+    return render_template('user_popup.html', user=user, form=form)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/scotthalasy/microblog/app/templates/user_popup.html", line 12, in template
+    {{ user.followers.count() followers, user.followed.count() following }},
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got 'followers'
+2020-09-28 11:30:20,848 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:77]
+2020-09-28 11:46:46,077 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:77]
