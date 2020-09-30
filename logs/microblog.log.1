@@ -1,4 +1,4 @@
-2020-09-28 11:21:53,184 ERROR: Exception on /user/scottymichaelh/popup [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
+2020-09-28 11:29:08,112 ERROR: Exception on /user/scottymichaelh/popup [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
 Traceback (most recent call last):
   File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -33,10 +33,18 @@ Traceback (most recent call last):
   File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
     raise value.with_traceback(tb)
   File "/Users/scotthalasy/microblog/app/templates/user_popup.html", line 12, in template
-    {{ "%(count)d followers", count=user.followers.count() }},
-jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got '='
-2020-09-28 11:27:04,420 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:77]
-2020-09-28 11:27:09,399 ERROR: Exception on /user/scottymichaelh/popup [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
+    {{ user.followers.count() followers, user.followed.count() following }},
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got 'followers'
+2020-09-28 11:30:20,848 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:77]
+2020-09-28 11:46:46,077 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:77]
+2020-09-28 13:10:08,096 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:77]
+2020-09-28 13:13:51,522 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:77]
+2020-09-28 13:25:42,727 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:77]
+2020-09-30 10:26:07,870 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:77]
+2020-09-30 10:27:32,173 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:77]
+2020-09-30 10:27:58,163 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:77]
+2020-09-30 10:28:13,153 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:77]
+2020-09-30 10:28:29,007 ERROR: Exception on /auth/login [POST] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
 Traceback (most recent call last):
   File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -50,64 +58,28 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/scotthalasy/microblog/app/main/routes.py", line 122, in user_popup
-    return render_template('user_popup.html', user=user, form=form)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/templating.py", line 138, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 883, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 857, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/loaders.py", line 127, in load
-    code = environment.compile(source, name, filename)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 638, in compile
-    self.handle_exception(source=source_hint)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "/Users/scotthalasy/microblog/app/templates/user_popup.html", line 12, in template
-    {{ %(count)d followers, count=user.followers.count() }},
-jinja2.exceptions.TemplateSyntaxError: unexpected '%'
-2020-09-28 11:27:16,971 ERROR: Exception on /user/scottymichaelh/popup [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
-Traceback (most recent call last):
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/scotthalasy/microblog/app/main/routes.py", line 122, in user_popup
-    return render_template('user_popup.html', user=user, form=form)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/templating.py", line 138, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 883, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 857, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/loaders.py", line 127, in load
-    code = environment.compile(source, name, filename)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 638, in compile
-    self.handle_exception(source=source_hint)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "/Users/scotthalasy/microblog/app/templates/user_popup.html", line 12, in template
-    {{ %(count)d followers, count=user.followers.count() }},
-jinja2.exceptions.TemplateSyntaxError: unexpected '%'
-2020-09-28 11:29:01,133 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:77]
+  File "/Users/scotthalasy/microblog/app/auth/routes.py", line 30, in login
+    user = User.query.filter_by(username=form.username.data).first()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py", line 512, in __get__
+    mapper = orm.class_mapper(type)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/sqlalchemy/orm/base.py", line 451, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/sqlalchemy/orm/base.py", line 430, in _inspect_mapped_class
+    mapper._configure_all()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/sqlalchemy/orm/mapper.py", line 1353, in _configure_all
+    configure_mappers()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/sqlalchemy/orm/mapper.py", line 3301, in configure_mappers
+    mapper._post_configure_properties()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/sqlalchemy/orm/mapper.py", line 1966, in _post_configure_properties
+    prop.init()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/sqlalchemy/orm/interfaces.py", line 197, in init
+    self.do_init()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/sqlalchemy/orm/relationships.py", line 2080, in do_init
+    self._generate_backref()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/sqlalchemy/orm/relationships.py", line 2333, in _generate_backref
+    % (backref_key, self, m)
+sqlalchemy.exc.ArgumentError: Error creating backref 'author' on relationship 'User.messages_received': property of that name exists on mapper 'mapped class Message->message'
+2020-09-30 10:50:51,577 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:77]
+2020-09-30 10:51:03,665 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:77]
+2020-09-30 10:51:09,885 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:77]
+2020-09-30 11:22:55,070 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:77]

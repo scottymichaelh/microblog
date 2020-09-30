@@ -1,4 +1,4 @@
-2020-09-22 11:51:40,845 ERROR: Exception on /index [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
+2020-09-22 12:46:27,676 ERROR: Exception on /auth/register [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
 Traceback (most recent call last):
   File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,27 +12,39 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 271, in decorated_view
-    return current_app.login_manager.unauthorized()
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/login_manager.py", line 174, in unauthorized
-    redirect_url = make_login_url(login_view, next_url=request.url)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 120, in login_url
-    base = expand_login_view(login_view)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 97, in expand_login_view
-    return url_for(login_view)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/helpers.py", line 370, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2216, in handle_url_build_error
-    reraise(exc_type, exc_value, tb)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/helpers.py", line 358, in url_for
-    endpoint, values, method=method, force_external=external
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/werkzeug/routing.py", line 2179, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth.login' instead?
-2020-09-22 12:00:54,359 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:62]
-2020-09-22 12:00:56,990 ERROR: Exception on /index [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
+  File "/Users/scotthalasy/microblog/app/auth/routes.py", line 22, in register
+    return render_template('auth/register.html', title='Register', form=form)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/scotthalasy/microblog/app/templates/auth/register.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/Users/scotthalasy/microblog/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
+    {% block content -%}
+  File "/Users/scotthalasy/microblog/app/templates/base.html", line 48, in block "content"
+    {% block app_content %}{% endblock %}
+  File "/Users/scotthalasy/microblog/app/templates/auth/register.html", line 8, in block "app_content"
+    {{ wft.quick_form(form) }}
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 471, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'wft' is undefined
+2020-09-22 12:49:29,533 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:71]
+2020-09-22 12:49:34,606 ERROR: Exception on /auth/register [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
 Traceback (most recent call last):
   File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -46,26 +58,11 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 271, in decorated_view
-    return current_app.login_manager.unauthorized()
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/login_manager.py", line 174, in unauthorized
-    redirect_url = make_login_url(login_view, next_url=request.url)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 120, in login_url
-    base = expand_login_view(login_view)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 97, in expand_login_view
-    return url_for(login_view)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/helpers.py", line 370, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2216, in handle_url_build_error
-    reraise(exc_type, exc_value, tb)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/helpers.py", line 358, in url_for
-    endpoint, values, method=method, force_external=external
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/werkzeug/routing.py", line 2179, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth.login' instead?
-2020-09-22 12:00:58,165 ERROR: Exception on /index [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
+  File "/Users/scotthalasy/microblog/app/auth/routes.py", line 22, in register
+    return render_template('auth/register.html', title=_('Register'), form=form)
+NameError: name '_' is not defined
+2020-09-22 12:50:34,476 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:71]
+2020-09-22 12:50:40,139 ERROR: Exception on /auth/register [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
 Traceback (most recent call last):
   File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -79,27 +76,57 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 271, in decorated_view
-    return current_app.login_manager.unauthorized()
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/login_manager.py", line 174, in unauthorized
-    redirect_url = make_login_url(login_view, next_url=request.url)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 120, in login_url
-    base = expand_login_view(login_view)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 97, in expand_login_view
-    return url_for(login_view)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/helpers.py", line 370, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2216, in handle_url_build_error
+  File "/Users/scotthalasy/microblog/app/auth/routes.py", line 22, in register
+    return render_template('auth/register.html', title='Register', form=form)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/scotthalasy/microblog/app/templates/auth/register.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/Users/scotthalasy/microblog/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
+    {% block content -%}
+  File "/Users/scotthalasy/microblog/app/templates/base.html", line 48, in block "content"
+    {% block app_content %}{% endblock %}
+  File "/Users/scotthalasy/microblog/app/templates/auth/register.html", line 8, in block "app_content"
+    {{ wft.quick_form(form) }}
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 471, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'wft' is undefined
+2020-09-22 12:51:17,806 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:71]
+2020-09-22 13:06:45,615 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:71]
+2020-09-22 13:14:50,224 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:71]
+2020-09-23 10:01:54,156 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:71]
+2020-09-23 10:34:46,178 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:71]
+2020-09-25 12:15:36,019 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:74]
+2020-09-25 12:15:40,805 ERROR: Exception on /index [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
     reraise(exc_type, exc_value, tb)
   File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
     raise value
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/helpers.py", line 358, in url_for
-    endpoint, values, method=method, force_external=external
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/werkzeug/routing.py", line 2179, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth.login' instead?
-2020-09-22 12:07:06,554 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:62]
-2020-09-22 12:31:53,859 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:71]
-2020-09-22 12:33:42,201 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:71]
-2020-09-22 12:34:32,262 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:71]
-2020-09-22 12:46:11,921 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:71]
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1948, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2242, in preprocess_request
+    rv = func()
+  File "/Users/scotthalasy/microblog/app/main/routes.py", line 15, in before_request
+    g.locale = str(get_locale())
+NameError: name 'get_locale' is not defined

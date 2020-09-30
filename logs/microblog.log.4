@@ -1,119 +1,5 @@
-2020-09-22 12:46:27,676 ERROR: Exception on /auth/register [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
-Traceback (most recent call last):
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/scotthalasy/microblog/app/auth/routes.py", line 22, in register
-    return render_template('auth/register.html', title='Register', form=form)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
-    ctx.app,
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
-    rv = template.render(context)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 1090, in render
-    self.environment.handle_exception()
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "/Users/scotthalasy/microblog/app/templates/auth/register.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "/Users/scotthalasy/microblog/app/templates/base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
-    {%- block html %}
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
-    {% block body -%}
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
-    {% block content -%}
-  File "/Users/scotthalasy/microblog/app/templates/base.html", line 48, in block "content"
-    {% block app_content %}{% endblock %}
-  File "/Users/scotthalasy/microblog/app/templates/auth/register.html", line 8, in block "app_content"
-    {{ wft.quick_form(form) }}
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 471, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'wft' is undefined
-2020-09-22 12:49:29,533 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:71]
-2020-09-22 12:49:34,606 ERROR: Exception on /auth/register [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
-Traceback (most recent call last):
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/scotthalasy/microblog/app/auth/routes.py", line 22, in register
-    return render_template('auth/register.html', title=_('Register'), form=form)
-NameError: name '_' is not defined
-2020-09-22 12:50:34,476 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:71]
-2020-09-22 12:50:40,139 ERROR: Exception on /auth/register [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
-Traceback (most recent call last):
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/scotthalasy/microblog/app/auth/routes.py", line 22, in register
-    return render_template('auth/register.html', title='Register', form=form)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
-    ctx.app,
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
-    rv = template.render(context)
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 1090, in render
-    self.environment.handle_exception()
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "/Users/scotthalasy/microblog/app/templates/auth/register.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "/Users/scotthalasy/microblog/app/templates/base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
-    {%- block html %}
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
-    {% block body -%}
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
-    {% block content -%}
-  File "/Users/scotthalasy/microblog/app/templates/base.html", line 48, in block "content"
-    {% block app_content %}{% endblock %}
-  File "/Users/scotthalasy/microblog/app/templates/auth/register.html", line 8, in block "app_content"
-    {{ wft.quick_form(form) }}
-  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/jinja2/environment.py", line 471, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'wft' is undefined
-2020-09-22 12:51:17,806 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:71]
-2020-09-22 13:06:45,615 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:71]
-2020-09-22 13:14:50,224 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:71]
-2020-09-23 10:01:54,156 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:71]
-2020-09-23 10:34:46,178 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:71]
-2020-09-25 12:15:36,019 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:74]
-2020-09-25 12:15:40,805 ERROR: Exception on /index [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
+2020-09-25 12:16:39,067 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:74]
+2020-09-25 12:16:40,985 ERROR: Exception on /index [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
 Traceback (most recent call last):
   File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -130,3 +16,114 @@ Traceback (most recent call last):
   File "/Users/scotthalasy/microblog/app/main/routes.py", line 15, in before_request
     g.locale = str(get_locale())
 NameError: name 'get_locale' is not defined
+2020-09-25 12:18:35,335 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:74]
+2020-09-25 12:19:40,533 ERROR: Exception on /search [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/scotthalasy/microblog/app/main/routes.py", line 115, in search
+    return render_template('search.html', title=_('Search'), posts=posts, next_url=next_url, prev_url=prev_url)
+NameError: name '_' is not defined
+2020-09-25 12:20:33,336 ERROR: Exception on /search [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/scotthalasy/microblog/app/main/routes.py", line 115, in search
+    return render_template('search.html', title='Search', posts=posts, next_url=next_url, prev_url=prev_url)
+NameError: name '_' is not defined
+2020-09-25 12:20:38,350 ERROR: Exception on /search [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/scotthalasy/microblog/app/main/routes.py", line 115, in search
+    return render_template('search.html', title='Search', posts=posts, next_url=next_url, prev_url=prev_url)
+NameError: name '_' is not defined
+2020-09-25 12:21:02,948 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:74]
+2020-09-25 12:26:31,282 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:74]
+2020-09-25 12:27:20,581 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:74]
+2020-09-25 12:36:14,638 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:74]
+2020-09-25 12:38:05,749 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:74]
+2020-09-25 12:40:59,288 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:74]
+2020-09-25 12:44:48,077 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:74]
+2020-09-25 12:53:10,919 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:74]
+2020-09-25 13:24:47,267 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:73]
+2020-09-25 13:28:50,040 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:73]
+2020-09-25 13:29:55,092 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:73]
+2020-09-25 13:29:59,576 ERROR: Exception on /search [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/scotthalasy/microblog/app/main/routes.py", line 112, in search
+    posts, total = Post.search(g.search_form.q.data, page, current_app.config['POSTS_PER_PAGE'])
+  File "/Users/scotthalasy/microblog/app/models.py", line 14, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+TypeError: cannot unpack non-iterable NoneType object
+2020-09-25 13:30:33,020 ERROR: Exception on /search [GET] [in /Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/scotthalasy/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/scotthalasy/microblog/app/main/routes.py", line 112, in search
+    posts, total = Post.search(g.search_form.q.data, page, current_app.config['POSTS_PER_PAGE'])
+  File "/Users/scotthalasy/microblog/app/models.py", line 14, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+TypeError: cannot unpack non-iterable NoneType object
