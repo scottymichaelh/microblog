@@ -74,3 +74,4 @@ Traceback (most recent call last):
     <h1>Send message to {{ recipient }}s, {{ recipient=recipient }}</h1>
 jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got '='
 2020-09-30 11:25:52,611 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:77]
+2020-09-30 11:29:34,160 INFO: BLog startup [in /Users/scotthalasy/microblog/app/__init__.py:77]
